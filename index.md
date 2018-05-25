@@ -1,18 +1,18 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
-carpentry: "FIXME"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
-venue: "FIXME"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "FIXME"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
-humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: FIXME      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["FIXME"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["FIXME"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["fixme@example.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+carpentry: "Summer Data Institute"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
+venue: "Dartmouth College Library"        # brief name of host site without address (e.g., "Euphoric State University")
+address: "Carson Instructional Center (Carson 61), Baker-Berry Library"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+country: "US"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
+language: "EN"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
+latlng: "43.705398,-72.288745"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
+humandate: "August 29-30, 2018"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "9:00 am - 4:30 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
+startdate: 2018-08-29      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2018-08-30        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["James Adams, Pamela Bagley, Don Fitzpatrick, Katie Harding, Lora Leligdon, Jenny Mullins"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["TBD"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+email: ["researchdatahelp@groups.dartmouth.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
@@ -28,28 +28,7 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   And run 'make workshop-check' *before* committing to make sure that changes are good.
 {% endcomment %}
 
-{% comment %}
-  EVENTBRITE
 
-  This block includes the Eventbrite registration widget if
-  'eventbrite' has been set in the header.  You can delete it if you
-  are not using Eventbrite, or leave it in, since it will not be
-  displayed if the 'eventbrite' field in the header is not set.
-{% endcomment %}
-{% if page.eventbrite %}
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="248px"
-  scrolling="auto">
-</iframe>
-{% endif %}
-
-<h4>This is the workshop template. Delete these lines and use it to customize your own website.
-If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in 
-<a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know about your workshop
-and our administrator may contact you if we need any extra information.</h4>
 
 <h2 id="general">General Information</h2>
 
@@ -149,11 +128,8 @@ and our administrator may contact you if we need any extra information.</h4>
   <li>Accessible restrooms are available.</li>
 </ul>
 <p>
-  Materials will be provided in advance of the workshop and
-  large-print handouts are available if needed by notifying the
-  organizers in advance.  If we can help making learning easier for
-  you (e.g. sign-language interpreters, lactation facilities) please
-  get in touch (using contact details below) and we will
+  If we can help making learning easier for
+  you please get in touch (using contact details below) and we will
   attempt to provide them.
 </p>
 
@@ -233,7 +209,7 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endcomment %}
 {% if page.collaborative_notes %}
 <p id="collaborative_notes">
-  We will use this <a href="{{page.collaborative_notes}}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
+  We will use this <a href="{{https://etherpad.net/p/Dartmouth_Summer_Data_Institute}}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
 </p>
 {% endif %}
 
